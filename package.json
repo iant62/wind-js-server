@@ -1,24 +1,40 @@
 {
-  "name": "wind-js-server",
-  "version": "0.0.3",
-  "description": "Demo rest service to expose Grib2 wind forecast data as JSON",
+  "name": "wind-js-server-enhanced",
+  "version": "2.0.0",
+  "description": "Enhanced wind-js-server for iant62's AvGuru Weather Map with automated GRIB processing and no-retention policy",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm install && node scripts/setup.js"
   },
   "keywords": [
-    "wind-js",
-    "node",
-    "grib2"
+    "weather",
+    "wind",
+    "grib",
+    "aviation",
+    "tiles"
   ],
-  "author": "danwild@y7mail.com",
-  "license": "ISC",
+  "author": "iant62",
+  "license": "MIT",
   "dependencies": {
-    "cors": "^2.7.1",
-    "express": "^4.13.4",
-    "moment": "^2.12.0",
-    "q": "^1.4.1",
-    "request": "^2.70.0"
-  }
+    "express": "^4.18.2",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iant62/wind-js-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iant62/wind-js-server/issues"
+  },
+  "homepage": "https://github.com/iant62/wind-js-server#readme"
 }
